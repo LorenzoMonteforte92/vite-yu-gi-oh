@@ -28,7 +28,7 @@ export default {
 
 <template>
   <AppHeader></AppHeader>
-  <main>
+  <main class="py-4" >
     <AppCardDisplay></AppCardDisplay>
   </main>
 </template>
