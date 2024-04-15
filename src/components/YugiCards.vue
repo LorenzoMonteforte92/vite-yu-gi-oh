@@ -25,7 +25,7 @@ export default {
 
 <template>
     <div class="card mt-3">
-        <img :src="cardInfo.card_images.image_url" class="card-img-top" :alt="cardInfo.name">
+        <img :src="cardInfo.card_images[0].image_url" class="card-img-top" :alt="cardInfo.name">
         <div class="card-body d-flex flex-column justify-content-center">
             <h6 class="text-white" >{{ cardInfo.name }}</h6>
             <p class="card-text">{{cardInfo.archetype}}</p>

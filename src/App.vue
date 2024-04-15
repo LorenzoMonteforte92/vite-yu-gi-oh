@@ -29,7 +29,7 @@ export default {
     })
       .then((response) => {
         store.yugiCards = response.data.data; 
-        console.log(store.yugiCards[0])       
+        console.log(store.yugiCards[0].card_images)       
       });
     }
   },
