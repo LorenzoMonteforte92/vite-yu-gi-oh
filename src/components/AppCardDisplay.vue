@@ -1,5 +1,6 @@
 <script>
 import YugiCards from './YugiCards.vue';
+import { store } from '../store.js';
     
 export default {
         name: 'AppCardDisplay',
@@ -9,7 +10,7 @@ export default {
 
         data(){
             return{
-                
+                store
             }
         },
         
@@ -26,7 +27,7 @@ export default {
    <div class="container">
     <div class="row">
         <div class="col-12 d-flex flex-wrap p-4 gap-3">
-            <YugiCards></YugiCards>
+            <YugiCards v-for="card in store.yugiCards" :key="card.id" :cardInfo="card"></YugiCards>
         </div>
     </div>
    </div>

@@ -22,7 +22,7 @@
         <div class="row">
             <div class="col-12 d-flex justify-content-center">
                 <div class="ms-logo-container" ><img src="https://vignette1.wikia.nocookie.net/yugiohenespanol/images/a/aa/Yugioh_anime_logo.jpg/revision/latest?cb=20130310042737&path-prefix=es" alt=""></div>
-                <div class="ms-logo-txt" ><Yu->YU-GI-OH! API</Yu-></div>
+                <div class="ms-logo-txt" >YU-GI-OH! API</div>
             </div>
         </div>
     </div>
