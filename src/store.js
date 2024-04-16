@@ -12,3 +12,4 @@ export const store = reactive({
 // sulla singola option mettere un @click="" con $emit
 // in app.vue richiamare l'$emit col suo nome e dargli come parametro la funzione che richiama l'API
 // nella funzione fare in modo che avvenga la magia
+    //

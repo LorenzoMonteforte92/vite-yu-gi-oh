@@ -22,18 +22,31 @@ export default {
   
   methods: {
     getCardsFromApi(){
+      let apiUrl = 'https://db.ygoprodeck.com/api/v7/cardinfo.php'
+      
+      
+
       const queryParams = {
         num: 20,
         offset: 0,
+
       }
 
-    axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?', {
+      if(store.clickedArchetype !== '') {
+          queryParams.archetype = store.clickedArchetype
+        }
+
+        console.log(queryParams.archetype)
+      
+      axios.get(apiUrl, {
       params: queryParams
     })
       .then((response) => {
         store.yugiCards = response.data.data; 
-             
+
       });
+
+      
     },
 
     getArchetypesFromApi(){
