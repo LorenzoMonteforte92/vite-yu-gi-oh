@@ -3,11 +3,14 @@ import axios from 'axios';
 import { store } from './store.js';
 import AppHeader from './components/AppHeader.vue';
 import AppCardDisplay from './components/AppCardDisplay.vue';
+import AppSelect from './components/AppSelect.vue';
+
 
 export default {
   components: {
     AppHeader,
     AppCardDisplay,
+    AppSelect,
 
   },
 
@@ -43,6 +46,7 @@ export default {
 <template>
   <AppHeader></AppHeader>
   <main class="py-4" >
+    <AppSelect></AppSelect>
     <AppCardDisplay></AppCardDisplay>
   </main>
 </template>

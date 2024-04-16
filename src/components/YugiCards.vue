@@ -28,7 +28,7 @@ export default {
         <img :src="cardInfo.card_images[0].image_url" class="card-img-top" :alt="cardInfo.name">
         <div class="card-body d-flex flex-column justify-content-center">
             <h6 class="text-white" >{{ cardInfo.name }}</h6>
-            <p class="card-text">{{cardInfo.archetype}}</p>
+            <p v-if="cardInfo.archetype" class="card-text">{{cardInfo.archetype}}</p>
     </div>
   </div>  
 </template>
