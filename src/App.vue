@@ -32,13 +32,23 @@ export default {
     })
       .then((response) => {
         store.yugiCards = response.data.data; 
-        console.log(store.yugiCards[0].card_images)       
+             
       });
-    }
+    },
+
+    getArchetypesFromApi(){
+    axios.get('https://db.ygoprodeck.com/api/v7/archetypes.php')
+      .then((response) => {
+        store.archetypes = response.data     
+      });
+    },
   },
+  // 
+  
 
   mounted() {
-   this.getCardsFromApi()
+   this.getCardsFromApi(),
+   this.getArchetypesFromApi()
   },
 }
 </script>
@@ -46,7 +56,7 @@ export default {
 <template>
   <AppHeader></AppHeader>
   <main class="py-4" >
-    <AppSelect></AppSelect>
+    <AppSelect @selectedArchetype = "getCardsFromApi" ></AppSelect>
     <AppCardDisplay></AppCardDisplay>
   </main>
 </template>
