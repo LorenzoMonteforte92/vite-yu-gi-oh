@@ -1,4 +1,5 @@
 <script>
+import AppCounter from './AppCounter.vue';
 import YugiCards from './YugiCards.vue';
 import { store } from '../store.js';
     
@@ -6,6 +7,7 @@ export default {
         name: 'AppCardDisplay',
         components:{
             YugiCards,
+            AppCounter
         },
 
         data(){
@@ -30,6 +32,7 @@ export default {
             <YugiCards v-for="card in store.yugiCards" :key="card.id" :cardInfo="card"></YugiCards>
         </div>
     </div>
+    <AppCounter></AppCounter>
    </div>
 </template>
 
